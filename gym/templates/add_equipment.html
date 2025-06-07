@@ -1,0 +1,58 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+    <div class="container" style="margin-top:60px; max-width: 700px; ">
+
+        <!-- Title Card -->
+        <div class="card mb-4 border-0 shadow-sm rounded" style="background-color: #f8f9fa;">
+            <div class="card-body text-center">
+                <h2 class="font-weight-bold" style="color: #0056b3;">Add New Equipment</h2>
+                <p class="text-muted small mb-0">Fill out the details for the new equipment to update inventory</p>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <form method="post" class="shadow-sm p-4 rounded-lg bg-white border">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="equipmentName" class="font-weight-bold text-secondary">Equipment Name</label>
+                <input type="text" id="equipmentName" name="name" class="form-control border-secondary rounded-pill" placeholder="Enter equipment name" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="price" class="font-weight-bold text-secondary">Price (INR)</label>
+                <input type="number" id="price" name="price" class="form-control border-secondary rounded-pill" placeholder="Enter price in INR" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="unit" class="font-weight-bold text-secondary">Unit</label>
+                <input type="text" id="unit" name="unit" class="form-control border-secondary rounded-pill" placeholder="Enter unit" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="purchaseDate" class="font-weight-bold text-secondary">Purchased Date</label>
+                <input type="date" id="purchaseDate" name="date" class="form-control border-secondary rounded-pill" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="description" class="font-weight-bold text-secondary">Description</label>
+                <textarea id="description" name="description" class="form-control border-secondary rounded" rows="3" placeholder="Enter description"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary btn-block mt-4 rounded-pill">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('Record Saved Successfully');
+    window.location.href = "{% url 'view_equipment' %}";
+</script>
+{% elif error == "yes" %}
+<script>
+    alert('Something Went Wrong, Try Again');
+</script>
+{% endif %}
+{% endblock %}

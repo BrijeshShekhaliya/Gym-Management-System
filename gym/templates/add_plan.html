@@ -1,0 +1,47 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+<div class="container" style="margin-top:60px; max-width: 700px; ">
+
+<div class="card mb-4 border-0 shadow-sm rounded" style="background-color: #f8f9fa;">
+    <div class="card-body text-center">
+        <h2 class="font-weight-bold" style="color: #0056b3;">Add New Plan</h2>
+        <p class="text-muted small mb-0">Provide details for the membership plan to offer tailored options for clients</p>
+    </div>
+</div>
+
+
+    <!-- Form Section -->
+    <form method="post" class="shadow-sm p-4 rounded-lg bg-white border">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="planName" class="font-weight-bold text-secondary">Plan Name</label>
+            <input type="text" id="planName" name="name" class="form-control border-secondary rounded-pill" placeholder="Enter plan name" required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="amount" class="font-weight-bold text-secondary">Amount (INR)</label>
+            <input type="number" id="amount" name="amount" class="form-control border-secondary rounded-pill" placeholder="Enter amount in INR" required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="duration" class="font-weight-bold text-secondary">Duration (Months)</label>
+            <input type="number" id="duration" name="duration" class="form-control border-secondary rounded-pill" placeholder="Enter duration in months" required>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary btn-block mt-4 rounded-pill">Submit</button>
+    </form>
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('Record Saved Successfully');
+    window.location.href = "{% url 'view_plan' %}";
+</script>
+{% elif error == "yes" %}
+<script>
+    alert('Something Went Wrong, Try Again');
+</script>
+{% endif %}
+{% endblock %}

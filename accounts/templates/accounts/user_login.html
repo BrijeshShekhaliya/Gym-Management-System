@@ -1,0 +1,84 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+    {% if error == "no" %}
+    <script>
+        alert('Logged In Successfully');
+        window.location.href = "{% url 'user_home' %}";
+    </script>
+    {% elif error == "yes" or error == "ad" %}
+    <script>
+        alert('Invalid Login Credentials, Try Again');
+    </script>
+    {% endif %}
+
+    <div class="container" style="margin-top: 60px; max-width: 700px; background: transparent; box-shadow: none;">
+        <!-- Title Card -->
+        <div class="text-center mb-4 p-4 rounded-lg shadow-sm" style="background: rgba(255, 255, 255, 0.8); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); border: 1px solid #ddd;">
+            <h2 class="font-weight-bold" style="color: #003366; font-size: 1.8rem; text-transform: uppercase; letter-spacing: 1px;">User Login</h2>
+            <p class="text-muted small mb-0" style="font-size: 0.9rem; font-style: italic; color: #333;">Access your Fitness Hub account</p>
+        </div>
+
+        <!-- Login Form Section -->
+        <form method="post" class="p-4 rounded-lg shadow-sm" style="background: rgba(255, 255, 255, 0.8); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username" class="font-weight-bold text-secondary" style="font-size: 1rem; color: #003366;">Username</label>
+                <input type="text" name="username" id="username" class="form-control border-secondary rounded-pill" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group mt-3">
+                <label for="password" class="font-weight-bold text-secondary" style="font-size: 1rem; color: #003366;">Password</label>
+                <input type="password" name="password" id="password" class="form-control border-secondary rounded-pill" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-outline-primary btn-block mt-4 rounded-pill" style="font-size: 1.1rem;">Login</button>
+            <div class="registration-link text-center mt-3">
+            <p>Don't have an account? <a href="{% url 'register' %}" class="text-primary font-weight-bold">Register here</a>.</p>
+            </div>
+        </form>
+
+    </div>
+     <div class="text-center p-4 rounded-lg shadow-sm" style="background: rgba(255, 255, 255, 0.8); box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); border: 1px solid #ddd;">
+            <p class="text-muted mb-0" style="font-size: 1.1rem; color: #333;">&copy; 2024 GYM@A.M_PATEL</p>
+        </div>
+
+
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-photo/3d-gym-equipment_23-2151114220.jpg?t=st=1731859492~exp=1731863092~hmac=7648ff9e0572d3e92fc7f06895261a29843449df77c0d06492967c84000ff03f&w=996");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-control {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for inputs */
+        }
+
+        form {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            transform: translateY(-3px); /* Slight hover lift effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #0056b3, #007bff);
+        }
+
+        footer p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+    </style>
+{% endblock %}

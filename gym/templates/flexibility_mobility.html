@@ -1,0 +1,126 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexibility & Mobility Program</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background-image: url('https://example.com/flexibility-mobility.jpg'); /* Replace with a real image URL */
+            background-size: cover;
+            background-position: center;
+            height: 110px; /* Adjusted height to match home page */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px 0;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for scaling */
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Flexibility & Mobility Program</h1>
+    <p>Enhance your flexibility and mobility for improved performance and injury prevention.</p>
+</div>
+
+<!-- Overview Section -->
+<div class="container section">
+    <div class="text-center mb-5">
+        <h2>Program Overview</h2>
+        <p>This Flexibility & Mobility program is designed to help you increase your range of motion, reduce stiffness, and improve overall body functionality. Perfect for athletes, fitness enthusiasts, and anyone looking to maintain a healthy body.</p>
+    </div>
+</div>
+
+<!-- Benefits Section -->
+<div class="container section">
+    <h3 class="text-center">Key Benefits</h3>
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <img src="https://www.goldfieldsphysio.com.au/wp-content/uploads/2020/10/sport-injury-prevention.jpeg" alt="Injury Prevention" class="img-fluid rounded-circle mb-3">
+            <h5>Injury Prevention</h5>
+            <p>Maintain flexibility to prevent injuries during workouts and daily activities.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://www.cielhr.com/wp-content/uploads/2019/10/PerformancewSpace-1080x675.png" alt="Improved Performance" class="img-fluid rounded-circle mb-3">
+            <h5>Improved Performance</h5>
+            <p>Enhance athletic performance by allowing for better movement efficiency.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://th.bing.com/th/id/OIP.ZVA7GmandhkTwoa4-WpDfAHaE8?rs=1&pid=ImgDetMain" alt="Reduced Muscle Soreness" class="img-fluid rounded-circle mb-3">
+            <h5>Reduced Muscle Soreness</h5>
+            <p>Help alleviate post-workout soreness through effective stretching techniques.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Sample Workouts Section -->
+<div class="container section">
+    <h3 class="text-center">Sample Workouts</h3>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/%D0%A1%D0%B0%D0%BC%D0%B8%D1%80%D0%B0_%D0%9C%D1%83%D1%81%D1%82%D0%B0%D1%84%D0%B0%D0%B5%D0%B2%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg/1280px-%D0%A1%D0%B0%D0%BC%D0%B8%D1%80%D0%B0_%D0%9C%D1%83%D1%81%D1%82%D0%B0%D1%84%D0%B0%D0%B5%D0%B2%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg" class="card-img-top" alt="Dynamic Stretching">
+                <div class="card-body">
+                    <h5 class="card-title">Dynamic Stretching</h5>
+                    <p class="card-text">Incorporate movements to warm up muscles and prepare joints.</p>
+                    <a href="https://en.wikipedia.org/wiki/Stretching#Dynamic_stretching" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.kx9Ng6eQ17Ggr93m6PRCZQHaEL?w=308&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="card-img-top" alt="Static Stretching">
+                <div class="card-body">
+                    <h5 class="card-title">Static Stretching</h5>
+                    <p class="card-text">Hold stretches to increase flexibility and relieve tension.</p>
+                    <a href="https://en.wikipedia.org/wiki/Stretching#Static_stretching" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Wa%C5%82ek_do_masa%C5%BCu3.jpg/330px-Wa%C5%82ek_do_masa%C5%BCu3.jpg" class="card-img-top" alt="Foam Rolling">
+                <div class="card-body">
+                    <h5 class="card-title">Foam Rolling</h5>
+                    <p class="card-text">Use foam rollers to target muscle knots and improve recovery.</p>
+                    <a href="https://en.wikipedia.org/wiki/Foam_roller" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 GYM@A.M_PATEL</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+{% endblock %}

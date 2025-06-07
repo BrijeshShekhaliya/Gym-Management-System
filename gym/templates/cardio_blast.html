@@ -1,0 +1,125 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardio Blast Program</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background-image: url('https://example.com/cardio-blast.jpg'); /* Replace with a real image URL */
+            background-size: cover;
+            background-position: center;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px 0;
+        }
+        /* Image hover effect */
+        .card-img-top {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Cardio Blast Program</h1>
+    <p>Boost your endurance, burn calories, and strengthen your heart.</p>
+</div>
+
+<!-- Overview Section -->
+<div class="container section">
+    <div class="text-center mb-5">
+        <h2>Program Overview</h2>
+        <p>The Cardio Blast program is designed to elevate your heart rate and maximize calorie burn. Perfect for all fitness levels, this program combines high-intensity interval training (HIIT) with steady-state cardio for maximum benefits.</p>
+    </div>
+</div>
+
+<!-- Benefits Section -->
+<div class="container section">
+    <h3 class="text-center">Key Benefits</h3>
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <img src="https://th.bing.com/th/id/OIP.Je_ycUP1wVOXiQedLJjGLQAAAA?w=252&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Increased Endurance" class="img-fluid rounded-circle mb-3">
+            <h5>Increased Endurance</h5>
+            <p>Improve stamina and stay active for longer periods.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://www.healthkart.com/connect/wp-content/uploads/2021/09/900x500_banner_HK-Connect_How-to-Improve-Heart-Health-_-Points-To-Keep-In-Mind.jpg" alt="Enhanced Heart Health" class="img-fluid rounded-circle mb-3">
+            <h5>Enhanced Heart Health</h5>
+            <p>Strengthen your cardiovascular system and heart health.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://th.bing.com/th/id/OIP.gOf-yl0zYwtqh3EitD-cvwHaEK?w=268&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Maximized Calorie Burn" class="img-fluid rounded-circle mb-3">
+            <h5>Maximized Calorie Burn</h5>
+            <p>Burn more calories during and after your workout.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Sample Workouts Section -->
+<div class="container section">
+    <h3 class="text-center">Sample Workouts</h3>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://images.everydayhealth.com/images/healthy-living/fitness/high-intensity-interval-training-guide-1440x810.jpg?sfvrsn=2b1a2523_3" class="card-img-top" alt="HIIT Session">
+                <div class="card-body">
+                    <h5 class="card-title">HIIT Session</h5>
+                    <p class="card-text">High-intensity intervals combining burpees, sprints, and jump squats for rapid calorie burn.</p>
+                    <a href="https://www.everydayhealth.com/fitness/high-intensity-interval-training/guide/" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://www.bodybuilding.com/images/2021/may/steady-state-cardio-header-960x540.jpg" class="card-img-top" alt="Steady-State Cardio">
+                <div class="card-body">
+                    <h5 class="card-title">Steady-State Cardio</h5>
+                    <p class="card-text">A moderate-paced session using treadmill, bike, or elliptical for endurance and heart health.</p>
+                    <a href="https://www.everydayhealth.com/medical-procedures/cardiac-catheterization/" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdv1Vj6xQ9_s0uLeWttAy-74l-2XQpWuQSLQ&s" class="card-img-top" alt="Circuit Training">
+                <div class="card-body">
+                    <h5 class="card-title">Circuit Training</h5>
+                    <p class="card-text">A mix of cardio and bodyweight exercises in a fast-paced, circuit-style workout.</p>
+                    <a href="https://www.verywellhealth.com/what-is-circuit-training-5224393" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 GYM@A.M_PATEL</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+{% endblock %}

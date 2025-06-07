@@ -1,0 +1,135 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+
+        nav a:hover {
+            background: #555;
+            transition: background 0.3s;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .mission,
+        .values,
+        .team {
+            margin: 20px 0;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .team-member {
+            background: #f4f4f4;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+
+<body>
+
+
+    <div class="container">
+        <section id="mission" class="mission">
+            <h2>Our Mission</h2>
+            <p>
+                At Fitness Hub, our mission is to empower individuals to achieve their fitness goals and lead healthier
+                lives. We strive to create a supportive and motivating environment where everyone can thrive.
+            </p>
+        </section>
+
+        <section id="values" class="values">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Community:</strong> We believe in fostering a strong community where members support each other.</li>
+                <li><strong>Integrity:</strong> We operate with honesty and transparency in all our dealings.</li>
+                <li><strong>Excellence:</strong> We aim for excellence in our services and facilities.</li>
+                <li><strong>Inclusivity:</strong> Everyone is welcome at Fitness Hub, regardless of their fitness level.</li>
+                <li><strong>Health & Wellness:</strong> Promoting a holistic approach to health and fitness.</li>
+            </ul>
+        </section>
+
+        <section id="team" class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <h3>Rohit Achrya</h3>
+                <p>Founder & Head Trainer</p>
+                <p>Rohit has over 10 years of experience in personal training and is passionate about helping others achieve their fitness goals.</p>
+            </div>
+            <div class="team-member">
+                <h3>Kirty Pandy</h3>
+                <p>Nutritionist</p>
+                <p>Kirty is much experience trainer that train female.</p>
+            </div>
+            <div class="team-member">
+                <h3>Krish upadhyay</h3>
+                <p>Group Fitness Instructor</p>
+                <p>Krish leads our high-energy group classes and motivates everyone to push their limits.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 GYM@A.M_PATEL.</p>
+    </footer>
+</body>
+
+</html>
+
+
+
+{% endblock body %}

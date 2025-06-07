@@ -1,0 +1,89 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+        .container {
+            margin-top: 100px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .c{
+            margin-left: 500px;
+        }
+        .ca{
+            margin-left: 560px;
+        }
+        .cb{
+            margin-left:588px;
+        }
+         footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .cc{
+            margin-left:474px;
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Contact Us</h1>
+        <div class="contact-info">
+            <p><strong>Name:</strong> BRIJESH SHEKHALIYA<strong class="ca">Name:</strong> MEET SHEKHALIYA</p>
+            <p><strong>Email:</strong> <a href="mailto:brijeshpatel48562@gmail.com">brijeshpatel48562@gmail.com</a><strong class="c">Email:</strong> <a href="mailto:meet@gmail.com">meet@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+91 9327853536">+91 9327853536</a><strong class="cb">Phone:</strong> <a href="tel:+91 1234567890">+91 1234567890</a></p>
+            <p><strong>Gym Address:</strong> Pavan street,Amreli,Gujrat<strong class="cc">Gym Address:</strong> Pavan street,Amreli,Gujrat</p>
+        </div>
+        <div class="text-center mt-4">
+            <br>
+            <br>
+            <p><strong>Click Below Button For Enquiry </strong></p>
+            <p style='font-size:30px;'>&#128071;</p>
+            <a href="add_request" class="btn btn-primary">Enquiry</a> <!-- Change URL to your desired link -->
+        </div>
+
+    </div>
+      <footer>
+        <p>&copy; 2024 GYM@A.M_PATEL.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (optional, for functionality like tooltips, modals) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+{% endblock body %}

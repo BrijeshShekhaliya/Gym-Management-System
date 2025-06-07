@@ -1,0 +1,124 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Training Program</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background-image: url('https://example.com/strength-training.jpg'); /* Replace with a real image URL */
+            background-size: cover;
+            background-position: center;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px 0;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* Add transition for scaling */
+        }
+        .card img:hover {
+            transform: scale(1.1); /* Scale up the image on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Strength Training Program</h1>
+    <p>Build strength, endurance, and muscle with expert-guided routines.</p>
+</div>
+
+<!-- Overview Section -->
+<div class="container section">
+    <div class="text-center mb-5">
+        <h2>Program Overview</h2>
+        <p>Our Strength Training Program is designed to help you build a solid foundation of strength and muscle. Ideal for beginners and advanced athletes alike, this program offers a variety of exercises to target all major muscle groups.</p>
+    </div>
+</div>
+
+<!-- Benefits Section -->
+<div class="container section">
+    <h3 class="text-center">Key Benefits</h3>
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <img src="https://th.bing.com/th/id/OIP._GZaIeTpsyAHDAYH0x8zqAHaEK?w=294&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Increased Muscle Mass" class="img-fluid rounded-circle mb-3">
+            <h5>Increased Muscle Mass</h5>
+            <p>Gain muscle strength and size with structured workouts.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://th.bing.com/th/id/OIP.yRGTAFjNdqhpUQz8O-AFmgHaEK?w=273&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Improved Endurance" class="img-fluid rounded-circle mb-3">
+            <h5>Improved Endurance</h5>
+            <p>Boost endurance and stay energized throughout the day.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://www.vpa.com.au/cdn/shop/articles/the-significance-of-mobility-exercises-for-enhanced-fitness-performance_2083x.jpg?v=1695427823" alt="Enhanced Mobility" class="img-fluid rounded-circle mb-3">
+            <h5>Enhanced Mobility</h5>
+            <p>Strength training improves flexibility and joint stability.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Sample Workouts Section -->
+<div class="container section">
+    <h3 class="text-center">Sample Workouts</h3>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2024/02/upper-body-strength-training-exercises-scaled.jpg?resize=2048%2C1365&ssl=1" class="card-img-top" alt="Upper Body Strength">
+                <div class="card-body">
+                    <h5 class="card-title">Upper Body Strength</h5>
+                    <p class="card-text">Pushups, Bench Press, Shoulder Press, and more to build upper body strength.</p>
+                    <a href="https://www.strengthlog.com/upper-body-exercises/" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2024/02/shutterstock_1888936885-scaled.jpg?resize=2048%2C1365&ssl=1" class="card-img-top" alt="Lower Body Strength">
+                <div class="card-body">
+                    <h5 class="card-title">Lower Body Strength</h5>
+                    <p class="card-text">Squats, Deadlifts, Lunges, and more to target your legs and glutes.</p>
+                    <a href="https://www.strengthlog.com/lower-body-exercises/" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2021/05/shutterstock_413984332.jpg?w=1000&ssl=1" class="card-img-top" alt="Full Body Circuit">
+                <div class="card-body">
+                    <h5 class="card-title">Full Body Circuit</h5>
+                    <p class="card-text">A mix of upper, lower, and core exercises for a complete workout.</p>
+                    <a href="https://www.strengthlog.com/?s=Full+Body+Circuit" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 GYM@A.M_PATEL.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% endblock %}

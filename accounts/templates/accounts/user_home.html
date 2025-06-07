@@ -1,0 +1,101 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .hero {
+            background-image: url('https://example.com/gym-image.jpg'); /* Replace with a real URL */
+            background-size: cover;
+            background-position: center;
+            height: 50px; /* Adjusted height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px 0;
+        }
+        /* Image hover effect */
+        .card-img-top {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to Your Gym Dashboard</h1>
+    <p>Your journey to fitness starts here!</p>
+</div>
+
+<!-- Main Content -->
+<div class="container section">
+    <!-- Welcome Section -->
+    <div class="text-center mb-5">
+        <h2>Hello, {{ user.username }}!</h2>
+        <p>Check out your progress, explore workout routines, and track your goals.</p>
+    </div>
+
+    <!-- Workout Programs Section -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.P4IOl5XSZO6nWjvSC0BmcgHaEK?rs=1&pid=ImgDetMain" class="card-img-top" alt="Strength Training">
+                <div class="card-body">
+                    <h5 class="card-title">Strength Training</h5>
+                    <p class="card-text">Build muscle and strength with our customized programs.</p>
+                    <a href="strength_training" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.eL6J_SILNoPSC8JeVvowBQHaEK?w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3rm=2&w=850&h=478&dpr=1.3&pid=ImgDetMain" class="card-img-top" alt="Cardio Blast">
+                <div class="card-body">
+                    <h5 class="card-title">Cardio Blast</h5>
+                    <p class="card-text">Boost your endurance with high-intensity cardio routines.</p>
+                    <a href="cardio_blast" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://barbend.com/wp-content/uploads/2018/04/Untitled-design-75.png" class="card-img-top" alt="Flexibility & Mobility">
+                <div class="card-body">
+                    <h5 class="card-title">Flexibility & Mobility</h5>
+                    <p class="card-text">Enhance your flexibility and prevent injuries.</p>
+                    <a href="flexibility_mobility" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 GYM@A.M_PATEL.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+{% endblock %}

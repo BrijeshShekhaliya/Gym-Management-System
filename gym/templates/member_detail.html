@@ -1,0 +1,102 @@
+{% extends 'navigationbar.html' %}
+
+{% block body %}
+<div class="container my-5">
+    <div class="card shadow-lg bg-dark opacity-75">
+        <div class="card-header bg-primary text-white text-center">
+            <h2>Your Member Details</h2>
+        </div>
+        <div class="card-body">
+            {% if members %}
+                <ul class="list-group list-group-flush">
+                    {% for member in members %}
+                        <li class="list-group-item">
+                            <strong>Name:</strong> <span class="member-detail">{{ member.name }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Contact:</strong> <span class="member-detail">{{ member.contact }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Email:</strong> <span class="member-detail">{{ member.emailid }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Gender:</strong> <span class="member-detail">{{ member.gender }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Plan:</strong> <span class="member-detail">{{ member.plan }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Expire Date:</strong> <span class="member-detail">{{ member.expiredate }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Submission Date:</strong> <span class="member-detail">{{ member.submission_date }}</span>
+                        </li>
+
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="text-center text-muted">No member details found.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+/* Container adjustments */
+.container {
+    max-width: 800px;
+    margin-top: 100px; /* Added space from top */
+}
+
+/* Enhanced font sizes for member details */
+.member-detail {
+    font-size: 1.2rem; /* Increased font size for member details */
+    color: #fff; /* Set white color for text for better contrast */
+}
+
+/* Card styles */
+.card {
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background for card */
+}
+
+/* Set background image for body */
+body {
+    background-image: url('https://img.freepik.com/free-photo/confident-sportswoman-with-dumbbell-dark_23-2147752923.jpg?t=st=1731859801~exp=1731863401~hmac=69a2013874eab0c64f6eeb15071de0e3615179cfe2cdbdc2c236c33f7da55b3a&w=1380'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Set default text color to white */
+}
+
+/* Adjustments to list group items */
+.list-group-item {
+    font-size: 1.1rem; /* Increased font size for list group items */
+    padding: 1.25rem; /* Adjusted padding for better spacing */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for list items */
+    color: #fff; /* White text color for better contrast */
+    border: 1px solid #ddd; /* Subtle border to separate list items */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition effects */
+}
+
+/* List item hover effect */
+.list-group-item:hover {
+    transform: translateY(-2px); /* Lift effect */
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .member-detail {
+        font-size: 1rem; /* Slightly decrease font size on smaller screens */
+    }
+    .list-group-item {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+</style>
+{% endblock %}
