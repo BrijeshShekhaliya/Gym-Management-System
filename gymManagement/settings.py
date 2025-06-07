@@ -133,5 +133,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 # Expire session at browser close
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+CSRF_TRUSTED_ORIGINS = [
+    "https://gym-management-system-lvyi.onrender.com",
+]
 
 
