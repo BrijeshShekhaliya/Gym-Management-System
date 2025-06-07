@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)w*63fh=8*vke2=(_70*0a)ro$njk_86_%7x-2tftz)qfhhhyh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gym-management-system-lvyi.onrender.com', 'localhost', '127.0.0.1']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'main',
-
 ]
 
 MIDDLEWARE = [
